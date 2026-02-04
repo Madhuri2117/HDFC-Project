@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HDFC NetBanking Login</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(to right, #e6f0fa 50%, #ffffff 50%);
+}
+
+/* Header */
+.nb-header {
+  padding: 15px 40px;
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+}
+
+.nb-header img {
+  height: 35px;
+}
+
+.nb-welcome {
+  text-align: center;
+  padding: 20px;
+  color: #555;
+}
+
+/* Main layout */
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 50px;
+  margin-top: 60px;
+}
+
+/* Login box */
+.login-box {
+  background: #ffffff;
+  width: 360px;
+  padding: 25px;
+  border-top: 5px solid #004c97;
+  border-radius: 4px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+.login-box h2 {
+  color: #004c97;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.login-box input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #cbd6e2;
+  border-radius: 3px;
+}
+
+.login-box input:focus {
+  outline: none;
+  border-color: #004c97;
+}
+
+/* Login button */
+.login-box button {
+  width: 100%;
+  padding: 11px;
+  background: #004c97;
+  color: white;
+  border: none;
+  font-size: 15px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.login-box button:hover {
+  background: #003a73;
+}
+
+/* Links */
+.links {
+  margin-top: 12px;
+  text-align: center;
+  font-size: 13px;
+}
+
+.links a {
+  color: #004c97;
+  text-decoration: none;
+}
+
+.links a:hover {
+  text-decoration: underline;
+}
+
+/* Info box */
+.info-box {
+  width: 320px;
+  background: #e6f0fa;
+  padding: 20px;
+  border-left: 4px solid #004c97;
+  border-radius: 4px;
+  color: #333;
+}
+
+.info-box ul {
+  padding-left: 18px;
+}
+
+.info-box li {
+  margin-bottom: 8px;
+}
+
+.nb-footer {
+  background: #1e4fa1;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  font-size: 12px;
+  margin-top: 40px;
+}
+
+.nb-footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+  </style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="nb-header">
+  <img src="hdfc-logo.png" alt="HDFC Bank">
+</header>
+
+<!-- WELCOME -->
+<div class="nb-welcome">
+  <h2>Welcome to HDFC Bank NetBanking</h2>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="main-container">
+
+  <!-- LOGIN BOX -->
+  <div class="login-box">
+    <h2>Login to NetBanking</h2>
+    <p class="customer-text">Customer ID: <strong id="showCustomerId"></strong></p>
+
+    <input type="text" id="userId" placeholder="Customer ID / User ID">
+    <input type="password" id="password" placeholder="Password / IPIN">
+
+    <button type="button" onclick="loginUser()">LOGIN</button>
+
+    <p class="links">
+      <a href="#">Forgot Customer ID</a> |
+      <a href="#">Forgot Password / IPIN</a>
+    </p>
+  </div>
+
+  <!-- SIDE INFO TEXT -->
+  <div class="info-box">
+    <p><strong>Your security is of utmost importance.</strong></p>
+    <ul>
+      <li>We have added a host of new features!</li>
+      <li>Anywhere access through Desktop or Mobile</li>
+      <li>Enhanced security measures</li>
+    </ul>
+  </div>
+
+</div>
+<footer class="nb-footer">
+  © Copyright HDFC Bank Ltd. |
+  <a href="#">Terms and Conditions</a> |
+  <a href="#">Privacy Policy</a>
+</footer>
+<script>
+    const users = {
+  "789456789": {
+    password: "1234",
+    name: "Nakkana Boina Ram Babu",
+    accountNo: "50200118802258",
+    balance: 650000000000,
+    type: "current"
+  },
+  "987345678": {
+    password: "5678",
+    name: "Ravikumar Reddy Lekkala",
+    accountNo: "50200118809911",
+    balance: 35000000000,
+    type: "Current"
+  }
+};
+  function loginUser() {
+  const userId = document.getElementById("userId").value;
+  const password = document.getElementById("password").value;
+
+  if (!users[userId]) {
+    alert("Invalid Customer ID");
+    return;
+  }
+
+  if (users[userId].password !== password) {
+    alert("Incorrect Password");
+    return;
+  }
+
+  // Save logged-in user details
+  localStorage.setItem("customerId", userId);
+  localStorage.setItem("customerName", users[userId].name);
+  localStorage.setItem("accountNumber", users[userId].accountNo);
+  localStorage.setItem("balance", users[userId].balance);
+  localStorage.setItem("accountType", users[userId].type);
+
+  window.location.href = "dashboard.html";
+}
+</script>
+
+</body>
+
+</html>

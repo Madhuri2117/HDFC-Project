@@ -1,9 +1,114 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>HDFC Demo</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bank Home</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Welcome to HDFC NetBanking</h1>
+
+<!-- HEADER -->
+<header class="top-header">
+  <div class="logo">
+    <img src="hdfc-logo.png" alt="HDFC Bank Logo">
+  </div>
+  <div class="login-wrapper">
+  <button class="login" onclick="toggleLogin()">LOGIN</button>
+
+  <div class="login-dropdown" id="loginDropdown">
+   <a href="netbanking.html" class="item">NetBanking <span>></span></a>
+    <div class="item">NetBanking for Business <span>›</span></div>
+
+    <div class="section">
+      <strong>Credit Card Portal</strong>
+      <div class="sub">
+        <a href="#">Know more ›</a>
+        <a href="#">MyCards ›</a>
+      </div>
+    </div>
+
+    <div class="section">
+      <strong>Loans Portal</strong>
+      <div class="sub">
+        <a href="#">Know more ›</a>
+      </div>
+    </div>
+
+    <div class="section">
+      <strong>HDFC Limited</strong>
+      <div class="sub">
+        <a href="#">Home Loans ›</a>
+        <a href="#">Fixed Deposits ›</a>
+      </div>
+    </div>
+
+    <div class="item">Xpressway <span>›</span></div>
+  </div>
+</div>
+</header>
+
+
+
+<!-- NAV TABS -->
+<nav class="tabs">
+  <span class="active">Personal</span>
+  <span>NRI</span>
+  <span>HNI</span>
+  <span>Agri</span>
+  <span>MSME</span>
+</nav>
+
+<!-- HERO SECTION -->
+<section class="hero">
+  <div class="hero-text">
+    <h1>Experience<br>Banking<br>Differently</h1>
+    <p>Introducing the new Mobile App & NetBanking</p>
+
+    <div class="hero-buttons">
+      <button class="outline">MobileApp ➜</button>
+      <button class="outline">NetBanking ➜</button>
+    </div>
+  </div>
+</section>
+
+<!-- SEARCH -->
+<div class="search-box">
+  <input type="text" placeholder="Search for Products, Services and More">
+</div>
+
+<!-- PRODUCTS -->
+<section class="products">
+  <div class="toggle">
+    <span class="active">Products</span>
+    <span>Services</span>
+  </div>
+
+  <div class="card">
+    <select>
+      <option>Select Product Type</option>
+      <option>Accounts</option>
+      <option>Loans</option>
+    </select>
+
+    <select>
+      <option>Select Product</option>
+      <option>Savings Account</option>
+      <option>Personal Loan</option>
+    </select>
+
+    <div class="actions">
+      <button class="apply">Apply Now</button>
+      <button class="know">Know More</button>
+    </div>
+  </div>
+</section>
+
+<footer class="nb-footer">
+  © Copyright HDFC Bank Ltd. |
+  <a href="#">Terms and Conditions</a> |
+  <a href="#">Privacy Policy</a>
+</footer>
+<script src="script.js"></script>
 </body>
 </html>
