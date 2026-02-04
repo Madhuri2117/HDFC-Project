@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .nb-footer {
+  background: #1e4fa1;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  font-size: 12px;
+  margin-top: 40px;
+}
+
+.nb-footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+    </style>
+  <meta charset="UTF-8">
+  <title>HDFC Bank NetBanking</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="nb-body">
+
+<!-- TOP HEADER -->
+<header class="nb-header">
+  <img src="hdfc-logo.png" alt="HDFC Bank">
+</header>
+
+<!-- WELCOME -->
+<div class="nb-welcome">
+  <h2>Welcome to HDFC Bank NetBanking</h2>
+</div>
+
+<!-- MAIN CONTAINER -->
+<div class="nb-container">
+
+  <!-- LEFT LOGIN BOX -->
+  <div class="nb-login-box">
+    <h3>Login to NetBanking</h3>
+
+    <label>Customer ID / User ID</label>
+    <input type="text" id="customerId">
+
+    <a href="#" class="nb-link">Forgot Customer ID</a>
+
+    <button type="button" class="nb-btn" onclick="goToLogin()">CONTINUE</button>
+
+    <div class="nb-alert">
+      <strong>Attention:</strong> Having trouble signing in with your User ID?
+      Please sign in with your Customer ID and password.
+    </div>
+
+    <p class="nb-subtitle">Don't have a HDFC Bank Savings Account?</p>
+
+    <div class="nb-small-links">
+      <a href="#">Credit Card only? Login here</a>
+      <a href="#">Prepaid Card only? Login here</a>
+      <a href="#">Retail Loan only? Login here</a>
+      <a href="#">HDFC Ltd. Home Loans? Login here</a>
+      <a href="#">HDFC Ltd. Deposits? Login here</a>
+    </div>
+  </div>
+
+  <!-- RIGHT INFO BOX -->
+  <div class="nb-info-box">
+
+    <p class="security-text">
+      Your security is of utmost importance.
+      <a href="#">Know More...</a>
+    </p>
+
+    <h4>First Time User?</h4>
+    <a href="#" class="nb-link">Register Now</a>
+
+    <h4>We have added a host of new features!</h4>
+    <ul>
+      <li>Anywhere access through Desktop or mobile</li>
+      <li>Enhanced security measures</li>
+    </ul>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer class="nb-footer">
+  © Copyright HDFC Bank Ltd. |
+  <a href="#">Terms and Conditions</a> |
+  <a href="#">Privacy Policy</a>
+</footer>
+
+<script>
+  function goToLogin() {
+    const customerId = document.getElementById("customerId").value;
+
+    if (customerId === "") {
+      alert("Please enter Customer ID");
+      return;
+    }
+
+    localStorage.setItem("customerId", customerId);
+    window.location.href = "login.html";
+  }
+</script>
+</body>
+</html>

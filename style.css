@@ -1,0 +1,319 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #f4f6f8;
+}
+
+/* HEADER */
+.top-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 16px;
+  background: white;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.logo {
+  font-weight: bold;
+  color: #004c8f;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.login-btn {
+  background: #e53935;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+}
+
+.menu {
+  font-size: 20px;
+}
+
+/* TABS */
+.tabs {
+  display: flex;
+  overflow-x: auto;
+  background: #e6eef7;
+}
+
+.tabs span {
+  padding: 10px 14px;
+  font-size: 14px;
+}
+
+.tabs .active {
+  color: #004c8f;
+  font-weight: bold;
+  border-bottom: 2px solid #004c8f;
+}
+
+/* HERO */
+.hero {
+  background: linear-gradient(#b3dcf7, #eaf5ff);
+  padding: 20px;
+}
+
+.hero-text h1 {
+  margin: 0;
+  font-size: 26px;
+}
+
+.hero-text p {
+  font-size: 14px;
+  margin: 10px 0;
+}
+
+.hero-buttons {
+  margin-top: 10px;
+}
+
+.outline {
+  background: white;
+  border: 1px solid #004c8f;
+  color: #004c8f;
+  padding: 8px 12px;
+  margin-right: 8px;
+  border-radius: 20px;
+}
+
+/* SEARCH */
+.search-box {
+  padding: 15px;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 25px;
+  border: 1px solid #ccc;
+}
+
+/* PRODUCTS */
+.products {
+  padding: 15px;
+}
+
+.toggle span {
+  margin-right: 15px;
+  font-weight: bold;
+}
+
+.toggle .active {
+  color: #004c8f;
+}
+
+.card {
+  background: white;
+  padding: 15px;
+  margin-top: 10px;
+  border-radius: 8px;
+}
+
+select {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+.apply {
+  background: #004c8f;
+  color: white;
+  border: none;
+  padding: 10px;
+  flex: 1;
+}
+
+.know {
+  background: #e6eef7;
+  border: none;
+  padding: 10px;
+  flex: 1;
+}
+
+.logo img{
+    height: 28px;
+    width: auto;
+}
+
+/* LOGIN DROPDOWN */
+.login-wrapper {
+  position: relative;
+}
+
+.login-dropdown {
+  position: absolute;
+  top: 45px;
+  right: 0;
+  width: 280px;
+  background: white;
+  color: #333;
+  border-radius: 6px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  padding: 10px;
+  display: none;
+  z-index: 1000;
+}
+
+.login-dropdown .item {
+  padding: 10px;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+}
+
+.login-dropdown .item:hover {
+  background: #f4f6f8;
+}
+
+.section {
+  padding: 10px;
+  border-top: 1px solid #eee;
+}
+
+.section strong {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.sub a {
+  display: block;
+  font-size: 13px;
+  color: #0b4da2;
+  text-decoration: none;
+  margin: 3px 0;
+}
+
+.sub a:hover {
+  text-decoration: underline;
+}
+
+/* NETBANKING PAGE */
+.nb-body {
+  font-family: Arial, sans-serif;
+  background: #f4f6f8;
+  margin: 0;
+}
+
+.nb-header {
+  padding: 15px 40px;
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+}
+
+.nb-header img {
+  height: 35px;
+}
+
+.nb-welcome {
+  text-align: center;
+  padding: 20px;
+  color: #555;
+}
+
+.nb-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 20px;
+}
+
+/* LEFT BOX */
+.nb-login-box {
+  background: #fff;
+  padding: 25px;
+  width: 420px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.15);
+}
+
+.nb-login-box input {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+}
+
+.nb-btn {
+  width: 100%;
+  padding: 10px;
+  background: #2d9cdb;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+.nb-alert {
+  background: #ffecec;
+  color: #b00000;
+  padding: 10px;
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+.nb-subtitle {
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+.nb-small-links a {
+  display: block;
+  font-size: 12px;
+  color: #1e88e5;
+  text-decoration: none;
+  margin-top: 4px;
+}
+
+/* RIGHT BOX */
+.nb-info-box {
+  width: 300px;
+  font-size: 14px;
+}
+
+.norton {
+  width: 120px;
+}
+
+.security-text {
+  margin: 10px 0;
+}
+
+.nb-link {
+  color: #1e88e5;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+/* FOOTER */
+.nb-footer {
+  background: #1e4fa1;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  font-size: 12px;
+  margin-top: 40px;
+}
+
+.nb-footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
